@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		835D035519CA191D00BCA3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035419CA191D00BCA3F0 /* Foundation.framework */; };
+		835D035719CA191D00BCA3F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035619CA191D00BCA3F0 /* CoreGraphics.framework */; };
+		835D035919CA191D00BCA3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035819CA191D00BCA3F0 /* UIKit.framework */; };
+		835D035B19CA191D00BCA3F0 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035A19CA191D00BCA3F0 /* SpriteKit.framework */; };
+		835D036119CA191D00BCA3F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835D035F19CA191D00BCA3F0 /* InfoPlist.strings */; };
+		835D036319CA191D00BCA3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D036219CA191D00BCA3F0 /* main.m */; };
+		835D036719CA191D00BCA3F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D036619CA191D00BCA3F0 /* AppDelegate.m */; };
+		835D036A19CA191D00BCA3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D036819CA191D00BCA3F0 /* Main.storyboard */; };
+		835D036D19CA191D00BCA3F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D036C19CA191D00BCA3F0 /* ViewController.m */; };
+		835D037019CA191D00BCA3F0 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D036F19CA191D00BCA3F0 /* MyScene.m */; };
+		835D037219CA191D00BCA3F0 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D037119CA191D00BCA3F0 /* Spaceship.png */; };
+		835D037419CA191D00BCA3F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835D037319CA191D00BCA3F0 /* Images.xcassets */; };
+		835D037B19CA191D00BCA3F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D037A19CA191D00BCA3F0 /* XCTest.framework */; };
+		835D037C19CA191D00BCA3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035419CA191D00BCA3F0 /* Foundation.framework */; };
+		835D037D19CA191D00BCA3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035819CA191D00BCA3F0 /* UIKit.framework */; };
+		835D038519CA191D00BCA3F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835D038319CA191D00BCA3F0 /* InfoPlist.strings */; };
+		835D038719CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D038619CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		835D037E19CA191D00BCA3F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 835D034919CA191D00BCA3F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835D035019CA191D00BCA3F0;
+			remoteInfo = "Computer Lab Zombie Shooter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		835D035119CA191D00BCA3F0 /* Computer Lab Zombie Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Computer Lab Zombie Shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		835D035419CA191D00BCA3F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		835D035619CA191D00BCA3F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		835D035819CA191D00BCA3F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		835D035A19CA191D00BCA3F0 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		835D035E19CA191D00BCA3F0 /* Computer Lab Zombie Shooter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Computer Lab Zombie Shooter-Info.plist"; sourceTree = "<group>"; };
+		835D036019CA191D00BCA3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		835D036219CA191D00BCA3F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		835D036419CA191D00BCA3F0 /* Computer Lab Zombie Shooter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Computer Lab Zombie Shooter-Prefix.pch"; sourceTree = "<group>"; };
+		835D036519CA191D00BCA3F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		835D036619CA191D00BCA3F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		835D036919CA191D00BCA3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		835D036B19CA191D00BCA3F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		835D036C19CA191D00BCA3F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		835D036E19CA191D00BCA3F0 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		835D036F19CA191D00BCA3F0 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		835D037119CA191D00BCA3F0 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		835D037319CA191D00BCA3F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		835D037919CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Computer Lab Zombie ShooterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		835D037A19CA191D00BCA3F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		835D038219CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Computer Lab Zombie ShooterTests-Info.plist"; sourceTree = "<group>"; };
+		835D038419CA191D00BCA3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		835D038619CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Computer_Lab_Zombie_ShooterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		835D034E19CA191D00BCA3F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835D035719CA191D00BCA3F0 /* CoreGraphics.framework in Frameworks */,
+				835D035919CA191D00BCA3F0 /* UIKit.framework in Frameworks */,
+				835D035B19CA191D00BCA3F0 /* SpriteKit.framework in Frameworks */,
+				835D035519CA191D00BCA3F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835D037619CA191D00BCA3F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835D037B19CA191D00BCA3F0 /* XCTest.framework in Frameworks */,
+				835D037D19CA191D00BCA3F0 /* UIKit.framework in Frameworks */,
+				835D037C19CA191D00BCA3F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		835D034819CA191D00BCA3F0 = {
+			isa = PBXGroup;
+			children = (
+				835D035C19CA191D00BCA3F0 /* Computer Lab Zombie Shooter */,
+				835D038019CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests */,
+				835D035319CA191D00BCA3F0 /* Frameworks */,
+				835D035219CA191D00BCA3F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		835D035219CA191D00BCA3F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				835D035119CA191D00BCA3F0 /* Computer Lab Zombie Shooter.app */,
+				835D037919CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		835D035319CA191D00BCA3F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				835D035419CA191D00BCA3F0 /* Foundation.framework */,
+				835D035619CA191D00BCA3F0 /* CoreGraphics.framework */,
+				835D035819CA191D00BCA3F0 /* UIKit.framework */,
+				835D035A19CA191D00BCA3F0 /* SpriteKit.framework */,
+				835D037A19CA191D00BCA3F0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		835D035C19CA191D00BCA3F0 /* Computer Lab Zombie Shooter */ = {
+			isa = PBXGroup;
+			children = (
+				835D036519CA191D00BCA3F0 /* AppDelegate.h */,
+				835D036619CA191D00BCA3F0 /* AppDelegate.m */,
+				835D036819CA191D00BCA3F0 /* Main.storyboard */,
+				835D036B19CA191D00BCA3F0 /* ViewController.h */,
+				835D036C19CA191D00BCA3F0 /* ViewController.m */,
+				835D036E19CA191D00BCA3F0 /* MyScene.h */,
+				835D036F19CA191D00BCA3F0 /* MyScene.m */,
+				835D037119CA191D00BCA3F0 /* Spaceship.png */,
+				835D037319CA191D00BCA3F0 /* Images.xcassets */,
+				835D035D19CA191D00BCA3F0 /* Supporting Files */,
+			);
+			path = "Computer Lab Zombie Shooter";
+			sourceTree = "<group>";
+		};
+		835D035D19CA191D00BCA3F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				835D035E19CA191D00BCA3F0 /* Computer Lab Zombie Shooter-Info.plist */,
+				835D035F19CA191D00BCA3F0 /* InfoPlist.strings */,
+				835D036219CA191D00BCA3F0 /* main.m */,
+				835D036419CA191D00BCA3F0 /* Computer Lab Zombie Shooter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		835D038019CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests */ = {
+			isa = PBXGroup;
+			children = (
+				835D038619CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m */,
+				835D038119CA191D00BCA3F0 /* Supporting Files */,
+			);
+			path = "Computer Lab Zombie ShooterTests";
+			sourceTree = "<group>";
+		};
+		835D038119CA191D00BCA3F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				835D038219CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests-Info.plist */,
+				835D038319CA191D00BCA3F0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		835D035019CA191D00BCA3F0 /* Computer Lab Zombie Shooter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835D038A19CA191D00BCA3F0 /* Build configuration list for PBXNativeTarget "Computer Lab Zombie Shooter" */;
+			buildPhases = (
+				835D034D19CA191D00BCA3F0 /* Sources */,
+				835D034E19CA191D00BCA3F0 /* Frameworks */,
+				835D034F19CA191D00BCA3F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Computer Lab Zombie Shooter";
+			productName = "Computer Lab Zombie Shooter";
+			productReference = 835D035119CA191D00BCA3F0 /* Computer Lab Zombie Shooter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		835D037819CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835D038D19CA191D00BCA3F0 /* Build configuration list for PBXNativeTarget "Computer Lab Zombie ShooterTests" */;
+			buildPhases = (
+				835D037519CA191D00BCA3F0 /* Sources */,
+				835D037619CA191D00BCA3F0 /* Frameworks */,
+				835D037719CA191D00BCA3F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				835D037F19CA191D00BCA3F0 /* PBXTargetDependency */,
+			);
+			name = "Computer Lab Zombie ShooterTests";
+			productName = "Computer Lab Zombie ShooterTests";
+			productReference = 835D037919CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		835D034919CA191D00BCA3F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Chris Mays";
+				TargetAttributes = {
+					835D037819CA191D00BCA3F0 = {
+						TestTargetID = 835D035019CA191D00BCA3F0;
+					};
+				};
+			};
+			buildConfigurationList = 835D034C19CA191D00BCA3F0 /* Build configuration list for PBXProject "Computer Lab Zombie Shooter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 835D034819CA191D00BCA3F0;
+			productRefGroup = 835D035219CA191D00BCA3F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				835D035019CA191D00BCA3F0 /* Computer Lab Zombie Shooter */,
+				835D037819CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		835D034F19CA191D00BCA3F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835D036119CA191D00BCA3F0 /* InfoPlist.strings in Resources */,
+				835D037419CA191D00BCA3F0 /* Images.xcassets in Resources */,
+				835D037219CA191D00BCA3F0 /* Spaceship.png in Resources */,
+				835D036A19CA191D00BCA3F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835D037719CA191D00BCA3F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835D038519CA191D00BCA3F0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		835D034D19CA191D00BCA3F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835D037019CA191D00BCA3F0 /* MyScene.m in Sources */,
+				835D036D19CA191D00BCA3F0 /* ViewController.m in Sources */,
+				835D036719CA191D00BCA3F0 /* AppDelegate.m in Sources */,
+				835D036319CA191D00BCA3F0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835D037519CA191D00BCA3F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835D038719CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		835D037F19CA191D00BCA3F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 835D035019CA191D00BCA3F0 /* Computer Lab Zombie Shooter */;
+			targetProxy = 835D037E19CA191D00BCA3F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		835D035F19CA191D00BCA3F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				835D036019CA191D00BCA3F0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		835D036819CA191D00BCA3F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				835D036919CA191D00BCA3F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		835D038319CA191D00BCA3F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				835D038419CA191D00BCA3F0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		835D038819CA191D00BCA3F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		835D038919CA191D00BCA3F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		835D038B19CA191D00BCA3F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Prefix.pch";
+				INFOPLIST_FILE = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		835D038C19CA191D00BCA3F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Prefix.pch";
+				INFOPLIST_FILE = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		835D038E19CA191D00BCA3F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Computer Lab Zombie Shooter.app/Computer Lab Zombie Shooter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Computer Lab Zombie ShooterTests/Computer Lab Zombie ShooterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		835D038F19CA191D00BCA3F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Computer Lab Zombie Shooter.app/Computer Lab Zombie Shooter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Prefix.pch";
+				INFOPLIST_FILE = "Computer Lab Zombie ShooterTests/Computer Lab Zombie ShooterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		835D034C19CA191D00BCA3F0 /* Build configuration list for PBXProject "Computer Lab Zombie Shooter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835D038819CA191D00BCA3F0 /* Debug */,
+				835D038919CA191D00BCA3F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835D038A19CA191D00BCA3F0 /* Build configuration list for PBXNativeTarget "Computer Lab Zombie Shooter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835D038B19CA191D00BCA3F0 /* Debug */,
+				835D038C19CA191D00BCA3F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		835D038D19CA191D00BCA3F0 /* Build configuration list for PBXNativeTarget "Computer Lab Zombie ShooterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835D038E19CA191D00BCA3F0 /* Debug */,
+				835D038F19CA191D00BCA3F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 835D034919CA191D00BCA3F0 /* Project object */;
+}
