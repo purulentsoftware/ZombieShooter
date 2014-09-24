@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8321EBDC19CCD0BD00035C92 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8321EBDB19CCD0BC00035C92 /* desk.png */; };
+		8321EBDF19CCD0D600035C92 /* Desk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321EBDE19CCD0D600035C92 /* Desk.m */; };
+		8321EBE219CCD0EE00035C92 /* Desktop.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321EBE119CCD0EE00035C92 /* Desktop.m */; };
+		8321EBE419CCD6BE00035C92 /* computer.png in Resources */ = {isa = PBXBuildFile; fileRef = 8321EBE319CCD6BE00035C92 /* computer.png */; };
+		8321EBE719D1C99100035C92 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321EBE619D1C99100035C92 /* MainMenu.m */; };
+		8321EBEA19D2568C00035C92 /* rightDoor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8321EBE819D2568C00035C92 /* rightDoor.png */; };
+		8321EBEB19D2568C00035C92 /* leftDoor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8321EBE919D2568C00035C92 /* leftDoor.png */; };
+		8327A41C19D2AECB00DDD558 /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327A41B19D2AECB00DDD558 /* MCManager.m */; };
+		8327A41F19D2BB2700DDD558 /* HostingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327A41E19D2BB2700DDD558 /* HostingScene.m */; };
+		8327A42219D2BD6C00DDD558 /* NonHostScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327A42119D2BD6C00DDD558 /* NonHostScene.m */; };
+		8343A4D519D260520010F823 /* PeerLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8343A4D419D260520010F823 /* PeerLobbyViewController.m */; };
+		8343A4D719D262610010F823 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8343A4D619D262610010F823 /* MultipeerConnectivity.framework */; };
 		835D035519CA191D00BCA3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035419CA191D00BCA3F0 /* Foundation.framework */; };
 		835D035719CA191D00BCA3F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035619CA191D00BCA3F0 /* CoreGraphics.framework */; };
 		835D035919CA191D00BCA3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035819CA191D00BCA3F0 /* UIKit.framework */; };
@@ -24,6 +36,15 @@
 		835D037D19CA191D00BCA3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D035819CA191D00BCA3F0 /* UIKit.framework */; };
 		835D038519CA191D00BCA3F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835D038319CA191D00BCA3F0 /* InfoPlist.strings */; };
 		835D038719CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D038619CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m */; };
+		835D039219CB4B9600BCA3F0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D039119CB4B9600BCA3F0 /* Player.m */; };
+		835D039419CB4C2100BCA3F0 /* blank_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D039319CB4C2100BCA3F0 /* blank_sprite.png */; };
+		835D039619CB997500BCA3F0 /* laser.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D039519CB997500BCA3F0 /* laser.png */; };
+		835D039919CB999500BCA3F0 /* laser.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D039819CB999500BCA3F0 /* laser.m */; };
+		835D039B19CBA0DC00BCA3F0 /* player_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D039A19CBA0DC00BCA3F0 /* player_sprite.png */; };
+		835D039D19CBA4EA00BCA3F0 /* floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D039C19CBA4EA00BCA3F0 /* floor.png */; };
+		835D03A019CBA66200BCA3F0 /* Zombie.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D039F19CBA66200BCA3F0 /* Zombie.m */; };
+		835D03A219CBA76B00BCA3F0 /* zombie_yellow_shirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D03A119CBA76B00BCA3F0 /* zombie_yellow_shirt.png */; };
+		835D03A419CBA77200BCA3F0 /* zombie_red_shirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 835D03A319CBA77200BCA3F0 /* zombie_red_shirt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +58,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8321EBDB19CCD0BC00035C92 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
+		8321EBDD19CCD0D600035C92 /* Desk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Desk.h; sourceTree = "<group>"; };
+		8321EBDE19CCD0D600035C92 /* Desk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Desk.m; sourceTree = "<group>"; };
+		8321EBE019CCD0EE00035C92 /* Desktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Desktop.h; sourceTree = "<group>"; };
+		8321EBE119CCD0EE00035C92 /* Desktop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Desktop.m; sourceTree = "<group>"; };
+		8321EBE319CCD6BE00035C92 /* computer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = computer.png; sourceTree = "<group>"; };
+		8321EBE519D1C99100035C92 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		8321EBE619D1C99100035C92 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		8321EBE819D2568C00035C92 /* rightDoor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightDoor.png; sourceTree = "<group>"; };
+		8321EBE919D2568C00035C92 /* leftDoor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftDoor.png; sourceTree = "<group>"; };
+		8327A41A19D2AECB00DDD558 /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
+		8327A41B19D2AECB00DDD558 /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
+		8327A41D19D2BB2700DDD558 /* HostingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostingScene.h; sourceTree = "<group>"; };
+		8327A41E19D2BB2700DDD558 /* HostingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostingScene.m; sourceTree = "<group>"; };
+		8327A42019D2BD6C00DDD558 /* NonHostScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonHostScene.h; sourceTree = "<group>"; };
+		8327A42119D2BD6C00DDD558 /* NonHostScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonHostScene.m; sourceTree = "<group>"; };
+		8343A4D319D260520010F823 /* PeerLobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerLobbyViewController.h; sourceTree = "<group>"; };
+		8343A4D419D260520010F823 /* PeerLobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerLobbyViewController.m; sourceTree = "<group>"; };
+		8343A4D619D262610010F823 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		835D035119CA191D00BCA3F0 /* Computer Lab Zombie Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Computer Lab Zombie Shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		835D035419CA191D00BCA3F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		835D035619CA191D00BCA3F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +100,18 @@
 		835D038219CA191D00BCA3F0 /* Computer Lab Zombie ShooterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Computer Lab Zombie ShooterTests-Info.plist"; sourceTree = "<group>"; };
 		835D038419CA191D00BCA3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		835D038619CA191D00BCA3F0 /* Computer_Lab_Zombie_ShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Computer_Lab_Zombie_ShooterTests.m; sourceTree = "<group>"; };
+		835D039019CB4B9600BCA3F0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		835D039119CB4B9600BCA3F0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		835D039319CB4C2100BCA3F0 /* blank_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_sprite.png; sourceTree = "<group>"; };
+		835D039519CB997500BCA3F0 /* laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser.png; sourceTree = "<group>"; };
+		835D039719CB999500BCA3F0 /* laser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = laser.h; sourceTree = "<group>"; };
+		835D039819CB999500BCA3F0 /* laser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = laser.m; sourceTree = "<group>"; };
+		835D039A19CBA0DC00BCA3F0 /* player_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_sprite.png; sourceTree = "<group>"; };
+		835D039C19CBA4EA00BCA3F0 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+		835D039E19CBA66200BCA3F0 /* Zombie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zombie.h; sourceTree = "<group>"; };
+		835D039F19CBA66200BCA3F0 /* Zombie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zombie.m; sourceTree = "<group>"; };
+		835D03A119CBA76B00BCA3F0 /* zombie_yellow_shirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_yellow_shirt.png; sourceTree = "<group>"; };
+		835D03A319CBA77200BCA3F0 /* zombie_red_shirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_red_shirt.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8343A4D719D262610010F823 /* MultipeerConnectivity.framework in Frameworks */,
 				835D035719CA191D00BCA3F0 /* CoreGraphics.framework in Frameworks */,
 				835D035919CA191D00BCA3F0 /* UIKit.framework in Frameworks */,
 				835D035B19CA191D00BCA3F0 /* SpriteKit.framework in Frameworks */,
@@ -109,6 +162,7 @@
 		835D035319CA191D00BCA3F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8343A4D619D262610010F823 /* MultipeerConnectivity.framework */,
 				835D035419CA191D00BCA3F0 /* Foundation.framework */,
 				835D035619CA191D00BCA3F0 /* CoreGraphics.framework */,
 				835D035819CA191D00BCA3F0 /* UIKit.framework */,
@@ -121,13 +175,43 @@
 		835D035C19CA191D00BCA3F0 /* Computer Lab Zombie Shooter */ = {
 			isa = PBXGroup;
 			children = (
+				8327A41A19D2AECB00DDD558 /* MCManager.h */,
+				8327A41B19D2AECB00DDD558 /* MCManager.m */,
 				835D036519CA191D00BCA3F0 /* AppDelegate.h */,
 				835D036619CA191D00BCA3F0 /* AppDelegate.m */,
 				835D036819CA191D00BCA3F0 /* Main.storyboard */,
 				835D036B19CA191D00BCA3F0 /* ViewController.h */,
 				835D036C19CA191D00BCA3F0 /* ViewController.m */,
+				8327A41D19D2BB2700DDD558 /* HostingScene.h */,
+				8327A41E19D2BB2700DDD558 /* HostingScene.m */,
+				8327A42019D2BD6C00DDD558 /* NonHostScene.h */,
+				8327A42119D2BD6C00DDD558 /* NonHostScene.m */,
+				835D039519CB997500BCA3F0 /* laser.png */,
+				835D039319CB4C2100BCA3F0 /* blank_sprite.png */,
+				835D03A119CBA76B00BCA3F0 /* zombie_yellow_shirt.png */,
+				835D03A319CBA77200BCA3F0 /* zombie_red_shirt.png */,
+				8321EBDB19CCD0BC00035C92 /* desk.png */,
+				835D039C19CBA4EA00BCA3F0 /* floor.png */,
+				8321EBE519D1C99100035C92 /* MainMenu.h */,
+				8321EBE619D1C99100035C92 /* MainMenu.m */,
 				835D036E19CA191D00BCA3F0 /* MyScene.h */,
 				835D036F19CA191D00BCA3F0 /* MyScene.m */,
+				8343A4D319D260520010F823 /* PeerLobbyViewController.h */,
+				8343A4D419D260520010F823 /* PeerLobbyViewController.m */,
+				835D039019CB4B9600BCA3F0 /* Player.h */,
+				835D039119CB4B9600BCA3F0 /* Player.m */,
+				835D039719CB999500BCA3F0 /* laser.h */,
+				835D039819CB999500BCA3F0 /* laser.m */,
+				835D039E19CBA66200BCA3F0 /* Zombie.h */,
+				835D039F19CBA66200BCA3F0 /* Zombie.m */,
+				8321EBDD19CCD0D600035C92 /* Desk.h */,
+				8321EBDE19CCD0D600035C92 /* Desk.m */,
+				8321EBE019CCD0EE00035C92 /* Desktop.h */,
+				8321EBE119CCD0EE00035C92 /* Desktop.m */,
+				8321EBE819D2568C00035C92 /* rightDoor.png */,
+				8321EBE919D2568C00035C92 /* leftDoor.png */,
+				8321EBE319CCD6BE00035C92 /* computer.png */,
+				835D039A19CBA0DC00BCA3F0 /* player_sprite.png */,
 				835D037119CA191D00BCA3F0 /* Spaceship.png */,
 				835D037319CA191D00BCA3F0 /* Images.xcassets */,
 				835D035D19CA191D00BCA3F0 /* Supporting Files */,
@@ -211,6 +295,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Chris Mays";
 				TargetAttributes = {
+					835D035019CA191D00BCA3F0 = {
+						DevelopmentTeam = NG9QU5D84A;
+					};
 					835D037819CA191D00BCA3F0 = {
 						TestTargetID = 835D035019CA191D00BCA3F0;
 					};
@@ -240,10 +327,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835D03A419CBA77200BCA3F0 /* zombie_red_shirt.png in Resources */,
+				835D039419CB4C2100BCA3F0 /* blank_sprite.png in Resources */,
+				8321EBE419CCD6BE00035C92 /* computer.png in Resources */,
 				835D036119CA191D00BCA3F0 /* InfoPlist.strings in Resources */,
 				835D037419CA191D00BCA3F0 /* Images.xcassets in Resources */,
+				835D039B19CBA0DC00BCA3F0 /* player_sprite.png in Resources */,
 				835D037219CA191D00BCA3F0 /* Spaceship.png in Resources */,
+				8321EBDC19CCD0BD00035C92 /* desk.png in Resources */,
+				8321EBEB19D2568C00035C92 /* leftDoor.png in Resources */,
 				835D036A19CA191D00BCA3F0 /* Main.storyboard in Resources */,
+				835D03A219CBA76B00BCA3F0 /* zombie_yellow_shirt.png in Resources */,
+				8321EBEA19D2568C00035C92 /* rightDoor.png in Resources */,
+				835D039D19CBA4EA00BCA3F0 /* floor.png in Resources */,
+				835D039619CB997500BCA3F0 /* laser.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +359,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8321EBDF19CCD0D600035C92 /* Desk.m in Sources */,
+				8327A41C19D2AECB00DDD558 /* MCManager.m in Sources */,
+				8327A42219D2BD6C00DDD558 /* NonHostScene.m in Sources */,
+				835D03A019CBA66200BCA3F0 /* Zombie.m in Sources */,
 				835D037019CA191D00BCA3F0 /* MyScene.m in Sources */,
 				835D036D19CA191D00BCA3F0 /* ViewController.m in Sources */,
 				835D036719CA191D00BCA3F0 /* AppDelegate.m in Sources */,
+				8343A4D519D260520010F823 /* PeerLobbyViewController.m in Sources */,
+				8321EBE719D1C99100035C92 /* MainMenu.m in Sources */,
+				8321EBE219CCD0EE00035C92 /* Desktop.m in Sources */,
+				835D039919CB999500BCA3F0 /* laser.m in Sources */,
+				8327A41F19D2BB2700DDD558 /* HostingScene.m in Sources */,
 				835D036319CA191D00BCA3F0 /* main.m in Sources */,
+				835D039219CB4B9600BCA3F0 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -380,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -392,11 +499,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Prefix.pch";
 				INFOPLIST_FILE = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,11 +518,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Prefix.pch";
 				INFOPLIST_FILE = "Computer Lab Zombie Shooter/Computer Lab Zombie Shooter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +591,7 @@
 				835D038C19CA191D00BCA3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		835D038D19CA191D00BCA3F0 /* Build configuration list for PBXNativeTarget "Computer Lab Zombie ShooterTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +600,7 @@
 				835D038F19CA191D00BCA3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

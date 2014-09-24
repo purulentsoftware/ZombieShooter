@@ -1,23 +1,34 @@
 //
-//  MyScene.m
+//  HostingScene.m
 //  Computer Lab Zombie Shooter
 //
-//  Created by Chris Mays on 9/17/14.
+//  Created by Chris Mays on 9/24/14.
 //  Copyright (c) 2014 Chris Mays. All rights reserved.
 //
 
-#import "MyScene.h"
+#import "HostingScene.h"
 #import "Desktop.h"
-@implementation MyScene
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
+#import "AppDelegate.h"
 static const uint32_t laserCat     =  0x1 << 0;
 static const uint32_t zombieCat        =  0x1 << 1;
 static const uint32_t playerCat        =  0x1 << 2;
 static const uint32_t deskCat        =  0x1 << 2;
 static const uint32_t compCat        =  0x1 << 3;
 static const uint32_t wallCat        =  0x1 << 4;
-
--(id)initWithSize:(CGSize)size {    
+@implementation HostingScene
+-(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(peerDidChangeStateWithNotification:)
+                                                     name:@"MCDidChangeStateNotification"
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didReceiveDataWithNotification:)
+                                                     name:@"MCDidReceiveDataNotification"
+                                                   object:nil];
+          _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         scoreLabel=[[SKLabelNode alloc] init];
         scoreLabel.text=[NSString stringWithFormat:@"Score: %lld", score];
         scoreLabel.fontColor=[UIColor blackColor];
@@ -44,16 +55,6 @@ static const uint32_t wallCat        =  0x1 << 4;
         player.physicsBody.categoryBitMask=playerCat;
         player.physicsBody.collisionBitMask = 0;
         [self addChild:player];
-        Zombie *zom=[[Zombie alloc] init];
-        zom.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:zom.size]; // 1
-        zom.physicsBody.dynamic = YES; // 2
-        zom.physicsBody.categoryBitMask = zombieCat; // 3
-        zom.physicsBody.contactTestBitMask = laserCat; // 4
-        zom.physicsBody.collisionBitMask = playerCat;
-        zom.physicsBody.allowsRotation=false;
-        [self addChild:zom];
-        [zom runAction:[SKAction moveTo:CGPointMake(0, 500) duration:10]];
-        zom.position=CGPointMake(0, -500);
         waveNumber=0;
         [self initDesks];
         score=0;
@@ -78,7 +79,6 @@ static const uint32_t wallCat        =  0x1 << 4;
     }
     return self;
 }
-
 -(void)initDesks{
     Desk   *frontLeftDesk=[[Desk alloc] init];
     frontLeftDesk.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:frontLeftDesk.size]; // 1
@@ -88,7 +88,7 @@ static const uint32_t wallCat        =  0x1 << 4;
     frontLeftDesk.physicsBody.collisionBitMask = zombieCat | deskCat | wallCat | laserCat;
     frontLeftDesk.position=CGPointMake(-100, 0);
     [self addChild:frontLeftDesk];
-  
+    
     Desk   *middleLeftDesk=[[Desk alloc] init];
     middleLeftDesk.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:middleLeftDesk.size]; // 1
     middleLeftDesk.physicsBody.dynamic = YES; // 2
@@ -127,11 +127,6 @@ static const uint32_t wallCat        =  0x1 << 4;
     
     
 }
-
-/*
- 
- 
- */
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
@@ -165,61 +160,6 @@ static const uint32_t wallCat        =  0x1 << 4;
         NSLog(@"%f",angleInDegrees);
     }
 }
-- (void)laser:(SKSpriteNode *)las didCollideWithZombie:(SKSpriteNode *)zombie {
-    NSLog(@"Hit");
-    [las removeFromParent];
-    SKLabelNode *points=[[SKLabelNode alloc] init];
-    points.text=@"+100 Point!";
-    points.fontSize=50;
-    points.fontColor=[UIColor blackColor];
-    points.zPosition=100;
-    points.position=zombie.position;
-    [points setScale:0];
-    [points runAction:[SKAction sequence:@[[SKAction scaleTo:1.0 duration:2], [SKAction removeFromParent]]]];
-    [self addChild:points];
-    [zombie removeFromParent];
-     score=score+100;
-    [zombieArray removeObject:zombie];
-    scoreLabel.text=[NSString stringWithFormat:@"Score: %lld", score];
-    
-    if ([zombieArray count]==0) {
-        waveNumber++;
-        [self performSelector:@selector(addZombie:) withObject:[NSNumber numberWithInt:waveNumber] afterDelay:4];
-        
-    }
-}
-
--(void)addZombie:(NSNumber*)waveNum{
-    SKLabelNode *label=[[SKLabelNode alloc] init];
-    [self addChild:label];
-    label.text=[NSString stringWithFormat:@"Wave %d", [waveNum intValue]];
-    label.fontSize=100;
-    [label setScale:0.0];
-    label.fontColor=[UIColor blackColor];
-    [label runAction:[SKAction sequence:@[[SKAction scaleTo:1.0 duration:2.0],[SKAction waitForDuration:2.0],[SKAction scaleTo:0.0 duration:2.0],[SKAction removeFromParent] ]]];
-    
-    int randomZombieCount=arc4random()%(30*[waveNum intValue])+20;
-    for (int i=0; i<randomZombieCount; i++) {
-        Zombie *zom=[[Zombie alloc] init];
-        zom.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:zom.size]; // 1
-        zom.physicsBody.dynamic = YES; // 2
-        zom.physicsBody.categoryBitMask = zombieCat; // 3
-        zom.physicsBody.contactTestBitMask = laserCat; // 4
-        zom.physicsBody.collisionBitMask = playerCat | zombieCat;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(i/2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self addChild:zom];
-            [zom runAction:[SKAction sequence:@[[SKAction runBlock:^(void){NSLog(@"called");}]
-                                                ,[SKAction moveTo:CGPointMake(0, 500) duration:10]]]];
-
-        });
-                zom.position=CGPointMake(arc4random()%(int)self.view.frame.size.width-self.view.frame.size.width/2, -500);
-        zom.physicsBody.allowsRotation=false;
-
-        [zombieArray addObject:zom];
-
-    }
-}
-
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
     SKPhysicsBody *firstBody, *secondBody;
@@ -246,20 +186,61 @@ static const uint32_t wallCat        =  0x1 << 4;
         [(Desk *)secondBody.node deskHit];
     }
 }
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-    float angleInDegrees = -(atan2(location.x, location.y));
+- (void)laser:(SKSpriteNode *)las didCollideWithZombie:(SKSpriteNode *)zombie {
+    NSLog(@"Hit");
+    [las removeFromParent];
+    SKLabelNode *points=[[SKLabelNode alloc] init];
+    points.text=@"+100 Point!";
+    points.fontSize=50;
+    points.fontColor=[UIColor blackColor];
+    points.zPosition=100;
+    points.position=zombie.position;
+    [points setScale:0];
+    [points runAction:[SKAction sequence:@[[SKAction scaleTo:1.0 duration:2], [SKAction removeFromParent]]]];
+    [self addChild:points];
+    [zombie removeFromParent];
+    score=score+100;
+    scoreLabel.text=[NSString stringWithFormat:@"Score: %lld", score];
     
-    //[player runAction:[SKAction rotateToAngle:angleInDegrees duration:1.0]];
-    player.zRotation=angleInDegrees;
+   
+}
+-(void)peerDidChangeStateWithNotification:(NSNotification *)notification{
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
     
+    if (state != MCSessionStateConnecting) {
+        if (state == MCSessionStateConnected) {
+            NSLog(@"connected");
+            
+        }
+        else if (state == MCSessionStateNotConnected){
+           
+        }
+        
+        
     }
-
 }
-
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+-(void)didReceiveDataWithNotification:(NSNotification *)notification{
+    NSLog(@"Recieved");
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    
+    NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
+    NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    int x=[receivedText intValue];
+   
+    Zombie *zom=[[Zombie alloc] init];
+    zom.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:zom.size]; // 1
+    zom.physicsBody.dynamic = YES; // 2
+    zom.physicsBody.categoryBitMask = zombieCat; // 3
+    zom.physicsBody.contactTestBitMask = laserCat; // 4
+    zom.physicsBody.collisionBitMask = playerCat | zombieCat;
+    [self addChild:zom];
+    zom.position=CGPointMake(x, -600);
+    zom.physicsBody.allowsRotation=false;
+    [zom runAction:[SKAction moveTo:CGPointMake(x, 600) duration:10]];
+    
+    
 }
-
 @end

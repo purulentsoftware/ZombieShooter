@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
-
-@interface ViewController : UIViewController
+#import "MainMenu.h"
+#import "PeerLobbyViewController.h"
+@interface ViewController : UIViewController<MainMenuDelegate, PeerLobbyDelegate, UIActionSheetDelegate>
+@property (nonatomic, strong) AppDelegate *appDelegate;
 
 @end
